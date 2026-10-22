@@ -4,155 +4,208 @@ import './App.css'
 const products = [
   {
     id: 1,
-    name: 'Спринт 01',
-    category: 'Кроссовки',
+    brand: 'Nike',
+    name: 'Air Max 90',
+    category: 'Sneakers',
     type: 'sneakers',
-    color: 'Молочный / графит',
-    price: 12990,
-    badge: 'Бестселлер',
+    color: 'Infrared / white',
+    price: 68900,
+    badge: 'Bestseller',
     image:
       'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85',
   },
   {
     id: 2,
-    name: 'Городской ритм',
-    category: 'Кроссовки',
+    brand: 'adidas',
+    name: 'Samba OG',
+    category: 'Sneakers',
     type: 'sneakers',
-    color: 'Песочный',
-    price: 14990,
-    badge: 'Новинка',
+    color: 'Cloud white / core black',
+    price: 54900,
+    badge: 'New',
     image:
       'https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85',
   },
   {
     id: 3,
-    name: 'Формат 02',
-    category: 'Туфли',
-    type: 'shoes',
-    color: 'Чёрная кожа',
-    price: 17990,
+    brand: 'Reebok',
+    name: 'Club C 85',
+    category: 'Sneakers',
+    type: 'sneakers',
+    color: 'Chalk / green',
+    price: 49900,
     badge: '',
     image:
-      'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 4,
-    name: 'Треккинг 01',
-    category: 'Ботинки',
+    brand: 'Nike',
+    name: 'Manoa Leather',
+    category: 'Boots',
     type: 'boots',
-    color: 'Тёмный шоколад',
-    price: 18990,
-    badge: 'Для города',
+    color: 'Black / black',
+    price: 79900,
+    badge: 'New',
     image:
       'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=900&q=85',
   },
   {
     id: 5,
-    name: 'Лёгкий шаг',
-    category: 'Кроссовки',
+    brand: 'adidas',
+    name: 'Gazelle Indoor',
+    category: 'Sneakers',
     type: 'sneakers',
-    color: 'Белый / серый',
-    price: 11990,
+    color: 'Preloved red / cream',
+    price: 57900,
     badge: '',
     image:
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 6,
-    name: 'Классика 03',
-    category: 'Туфли',
-    type: 'shoes',
-    color: 'Коньячная кожа',
-    price: 16990,
+    brand: 'Nike',
+    name: 'Dunk Low',
+    category: 'Sneakers',
+    type: 'sneakers',
+    color: 'White / university blue',
+    price: 62900,
     badge: '',
     image:
       'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85',
   },
   {
     id: 7,
-    name: 'Маршрут 02',
-    category: 'Кроссовки',
+    brand: 'ASICS',
+    name: 'GT-2160',
+    category: 'Sneakers',
     type: 'sneakers',
-    color: 'Серый / лайм',
-    price: 13990,
-    badge: 'Новинка',
-    description: 'Лёгкая пара с амортизирующей подошвой для длинных городских маршрутов.',
+    color: 'White / pure silver',
+    price: 69900,
+    badge: 'New',
+    description: 'A lightweight running-inspired sneaker with cushioned comfort for everyday wear.',
     image:
-      'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 8,
-    name: 'Север 01',
-    category: 'Ботинки',
-    type: 'boots',
-    color: 'Чёрный',
-    price: 20990,
+    brand: 'Reebok',
+    name: 'Classic Leather',
+    category: 'Shoes',
+    type: 'shoes',
+    color: 'Chalk / black',
+    price: 45900,
     badge: '',
-    description: 'Уверенная посадка и цепкий протектор для прохладной погоды.',
+    description: 'A clean leather classic with a soft step and timeless low-profile shape.',
     image:
-      'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 9,
-    name: 'Дерби 02',
-    category: 'Туфли',
-    type: 'shoes',
-    color: 'Тёмно-коричневый',
-    price: 18490,
+    brand: 'adidas',
+    name: 'Superstar',
+    category: 'Sneakers',
+    type: 'sneakers',
+    color: 'White / black',
+    price: 52900,
     badge: '',
-    description: 'Сдержанный силуэт для рабочих дней и особых случаев.',
+    description: 'The iconic shell-toe sneaker, made for everyday city style.',
     image:
-      'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 10,
-    name: 'Темп 04',
-    category: 'Кроссовки',
+    brand: 'Nike',
+    name: "Air Force 1 '07",
+    category: 'Sneakers',
     type: 'sneakers',
-    color: 'Белый / синий',
-    price: 15490,
-    badge: 'Бестселлер',
-    description: 'Дышащий верх и мягкий шаг на каждый день.',
+    color: 'White / white',
+    price: 64900,
+    badge: 'Bestseller',
+    description: 'A court classic with a smooth leather upper and all-day cushioning.',
     image:
-      'https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 11,
-    name: 'Линия 05',
-    category: 'Туфли',
-    type: 'shoes',
-    color: 'Чёрная кожа',
-    price: 19490,
+    brand: 'Reebok',
+    name: 'Classic Nylon',
+    category: 'Sneakers',
+    type: 'sneakers',
+    color: 'Chalk / vector navy',
+    price: 47900,
     badge: '',
-    description: 'Классическая форма с аккуратной отделкой и удобной колодкой.',
+    description: 'A retro runner in soft suede and nylon with a comfortable padded fit.',
     image:
-      'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=900&q=90',
   },
   {
     id: 12,
-    name: 'Треккинг 03',
-    category: 'Ботинки',
-    type: 'boots',
-    color: 'Оливковый',
-    price: 22990,
-    badge: 'Для маршрута',
-    description: 'Поддержка голеностопа и рельефная подошва для прогулок за городом.',
+    brand: 'ASICS',
+    name: 'GEL-1130',
+    category: 'Sneakers',
+    type: 'sneakers',
+    color: 'Cream / graphite grey',
+    price: 64900,
+    badge: '',
+    description: 'A heritage running silhouette with GEL cushioning for a smooth city stride.',
     image:
-      'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=900&q=85',
+      'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=90',
   },
 ]
 
 const categories = [
-  { id: 'all', label: 'Вся обувь' },
-  { id: 'sneakers', label: 'Кроссовки' },
-  { id: 'boots', label: 'Ботинки' },
-  { id: 'shoes', label: 'Туфли' },
+  { id: 'all', label: 'All footwear' },
+  { id: 'sneakers', label: 'Sneakers' },
+  { id: 'boots', label: 'Boots' },
+  { id: 'shoes', label: 'Shoes' },
 ]
 
-const formatPrice = (price) => `${price.toLocaleString('ru-RU')} ₽`
+const formatPrice = (price) => `${price.toLocaleString('en-US')} ₸`
+
+function loadCart() {
+  try {
+    const storedCart = localStorage.getItem('romans-cart')
+    if (!storedCart) return {}
+
+    const parsedCart = JSON.parse(storedCart)
+    if (!parsedCart || typeof parsedCart !== 'object' || Array.isArray(parsedCart)) {
+      throw new Error('Saved bag has an invalid format.')
+    }
+
+    return Object.fromEntries(
+      Object.entries(parsedCart).filter(
+        ([productId, quantity]) =>
+          (products.some((product) => String(product.id) === productId) ||
+            /^custom-\d+$/.test(productId)) &&
+          Number.isInteger(quantity) &&
+          quantity > 0,
+      ),
+    )
+  } catch (error) {
+    console.error('Could not restore the saved bag.', error)
+    return {}
+  }
+}
+
+function loadSession() {
+  try {
+    const storedSession = localStorage.getItem('romans-session')
+    if (!storedSession) return null
+
+    const session = JSON.parse(storedSession)
+    if (typeof session?.name === 'string' && typeof session?.email === 'string') {
+      return { name: session.name, email: session.email }
+    }
+    throw new Error('The saved account session has an invalid format.')
+  } catch (error) {
+    console.error('Could not restore the saved account session.', error)
+    return null
+  }
+}
 
 const demoAccount = {
-  name: 'Роман Демов',
+  name: 'Romans Shoe Guest',
   email: 'demo@romans.shoe',
   password: 'romans123',
 }
@@ -175,32 +228,32 @@ function ProductCard({ product, index, totalCount, quantity, onAdd, onBuy, onVie
     <article className="product-card">
       <div className="product-image-wrap">
         <img
-          alt={`${product.category} ${product.name}, ${product.color}`}
+          alt={`${product.brand} ${product.name} in ${product.color}`}
           className="product-image"
           loading="lazy"
           src={product.image}
         />
         {product.badge && <span className="product-badge">{product.badge}</span>}
         <span className="product-index">{String(index + 1).padStart(2, '0')} / {String(totalCount).padStart(2, '0')}</span>
-        {quantity > 0 && <span className="in-cart-label">В корзине · {quantity}</span>}
+        {quantity > 0 && <span className="in-cart-label">In bag · {quantity}</span>}
       </div>
       <div className="product-info">
         <div>
-          <span className="product-category">{product.category}</span>
+          <span className="product-category">{product.brand || 'Independent'} · {product.category}</span>
           <h3>{product.name}</h3>
-          <p>{product.description || `${product.color}. Комфортная пара на каждый день.`}</p>
+          <p>{product.description || `${product.color}. Made for everyday comfort.`}</p>
         </div>
         <strong>{formatPrice(product.price)}</strong>
       </div>
       <div className="product-actions">
         <button className="product-details-button" onClick={onView} type="button">
-          Подробнее
+          Details
         </button>
         <button className="product-buy-button" onClick={onAdd} type="button">
-          В корзину
+          Add to bag
         </button>
         <button className="product-buy-now" onClick={onBuy} type="button">
-          Купить
+          Buy now
         </button>
       </div>
     </article>
@@ -217,20 +270,20 @@ function ProductDetailDialog({ product, onClose, onAdd }) {
         onMouseDown={(event) => event.stopPropagation()}
         role="dialog"
       >
-        <button aria-label="Закрыть детали товара" className="close-button modal-close" onClick={onClose} type="button">×</button>
-        <img alt={`${product.category} ${product.name}`} src={product.image} />
+        <button aria-label="Close product details" className="close-button modal-close" onClick={onClose} type="button">×</button>
+        <img alt={`${product.brand} ${product.name}`} src={product.image} />
         <div className="product-detail-copy">
-          <span className="section-kicker">{product.category} · RS-{String(product.id).padStart(3, '0')}</span>
+          <span className="section-kicker">{product.brand || 'Independent'} · {product.category} · RS-{String(product.id).padStart(3, '0')}</span>
           <h2 id="product-detail-title">{product.name}</h2>
           <strong>{formatPrice(product.price)}</strong>
-          <p>{product.description || `Модель ${product.name} создана для комфорта каждый день. ${product.color} легко сочетается с повседневным гардеробом.`}</p>
+          <p>{product.description || `${product.color}. Designed for everyday comfort and effortless styling.`}</p>
           <dl>
-            <div><dt>Цвет</dt><dd>{product.color}</dd></div>
-            <div><dt>Материал</dt><dd>{product.type === 'boots' ? 'Кожа и плотный текстиль' : 'Кожа и дышащий текстиль'}</dd></div>
-            <div><dt>Доставка</dt><dd>Бесплатно от 15 000 ₽ · возврат 14 дней</dd></div>
+            <div><dt>Color</dt><dd>{product.color}</dd></div>
+            <div><dt>Materials</dt><dd>{product.type === 'boots' ? 'Leather and durable textile' : 'Leather and breathable textile'}</dd></div>
+            <div><dt>Delivery</dt><dd>Free delivery in Almaty · 14-day returns</dd></div>
           </dl>
           <button className="checkout-button" onClick={onAdd} type="button">
-            Добавить в корзину <ArrowIcon />
+            Add to bag <ArrowIcon />
           </button>
         </div>
       </section>
@@ -254,7 +307,7 @@ function CartDrawer({
   return (
     <div className="cart-overlay" onMouseDown={onClose}>
       <aside
-        aria-label="Корзина"
+        aria-label="Shopping bag"
         aria-modal="true"
         className="cart-drawer"
         onMouseDown={(event) => event.stopPropagation()}
@@ -262,10 +315,10 @@ function CartDrawer({
       >
         <div className="cart-drawer-header">
           <div>
-            <span className="section-kicker">Romans Shoe</span>
-            <h2>Твоя корзина <span>({cartCount})</span></h2>
+            <span className="section-kicker">Romans Shoe · Almaty</span>
+            <h2>Your bag <span>({cartCount})</span></h2>
           </div>
-          <button aria-label="Закрыть корзину" className="close-button" onClick={onClose} type="button">×</button>
+          <button aria-label="Close bag" className="close-button" onClick={onClose} type="button">×</button>
         </div>
         {cartItems.length ? (
           <>
@@ -274,41 +327,41 @@ function CartDrawer({
                 <div className="cart-item" key={product.id}>
                   <img alt="" src={product.image} />
                   <div className="cart-item-info">
-                    <span>{product.category}</span>
+                    <span>{product.brand || 'Independent'} · {product.category}</span>
                     <h3>{product.name}</h3>
                     <p>{formatPrice(product.price)}</p>
                     <div className="quantity-control">
-                      <button aria-label={`Уменьшить количество ${product.name}`} onClick={() => onQuantityChange(product.id, -1)} type="button">−</button>
+                      <button aria-label={`Decrease quantity of ${product.name}`} onClick={() => onQuantityChange(product.id, -1)} type="button">−</button>
                       <span>{cart[product.id]}</span>
-                      <button aria-label={`Увеличить количество ${product.name}`} onClick={() => onQuantityChange(product.id, 1)} type="button">+</button>
+                      <button aria-label={`Increase quantity of ${product.name}`} onClick={() => onQuantityChange(product.id, 1)} type="button">+</button>
                     </div>
                   </div>
                   <button
-                    aria-label={`Удалить ${product.name} из корзины`}
+                    aria-label={`Remove ${product.name} from bag`}
                     className="remove-cart-item"
                     onClick={() => onRemove(product.id)}
                     type="button"
                   >
-                    Удалить
+                    Remove
                   </button>
                 </div>
               ))}
             </div>
             <div className="cart-summary">
-              <div><span>Итого</span><strong>{formatPrice(cartTotal)}</strong></div>
+              <div><span>Total</span><strong>{formatPrice(cartTotal)}</strong></div>
               <button className="checkout-button" onClick={onCheckout} type="button">
-                {loggedUser ? 'Оформить демо-заказ' : 'Войти для оформления'} <ArrowIcon />
+                {loggedUser ? 'Place demo order' : 'Sign in to checkout'} <ArrowIcon />
               </button>
-              {checkoutMessage ? <p className="checkout-message" role="status">{checkoutMessage}</p> : <p>Это демонстрационный заказ без оплаты.</p>}
+              {checkoutMessage ? <p className="checkout-message" role="status">{checkoutMessage}</p> : <p>Demo checkout · no payment is collected.</p>}
             </div>
           </>
         ) : (
           <div className="cart-empty">
             <span className="cart-empty-icon">R.</span>
-            <h3>Здесь пока пусто</h3>
-            <p>Самое время найти пару, которая подойдёт именно тебе.</p>
+            <h3>Your bag is empty</h3>
+            <p>Find your next favorite pair in our curated collection.</p>
             <button className="primary-link" onClick={onBrowse} type="button">
-              В каталог <ArrowIcon />
+              Explore the collection <ArrowIcon />
             </button>
           </div>
         )}
@@ -337,26 +390,26 @@ function AuthDialog({ onClose, onLogin, onRegister, notice }) {
     if (mode === 'login') {
       const message = onLogin(form.email.trim(), form.password)
       if (message) setSuccess(message)
-      else setError('Не удалось войти. Проверьте e-mail и пароль демо-аккаунта.')
+      else setError('Sign-in failed. Check your email and password.')
       return
     }
 
     if (form.password.length < 8) {
-      setError('Пароль должен содержать не менее 8 символов.')
+      setError('Password must be at least 8 characters long.')
       return
     }
     if (form.password !== form.confirmation) {
-      setError('Пароли не совпадают.')
+      setError('Passwords do not match.')
       return
     }
     if (!acceptedTerms) {
-      setError('Подтвердите согласие с условиями.')
+      setError('Please accept the demo site terms.')
       return
     }
 
     const message = onRegister({ name: form.name.trim(), email: form.email.trim(), password: form.password })
     if (message) setSuccess(message)
-    else setError('Для этого e-mail уже есть демо-аккаунт. Войдите в него.')
+    else setError('A demo account already exists for this email. Please sign in.')
   }
 
   return (
@@ -368,35 +421,35 @@ function AuthDialog({ onClose, onLogin, onRegister, notice }) {
         onMouseDown={(event) => event.stopPropagation()}
         role="dialog"
       >
-        <button aria-label="Закрыть" className="close-button modal-close" onClick={onClose} type="button">×</button>
-        <span className="section-kicker">Romans Shoe · демо-аккаунт</span>
-        <h2 id="auth-title">{success ? 'Готово' : mode === 'login' ? 'С возвращением' : 'Создать аккаунт'}</h2>
+        <button aria-label="Close" className="close-button modal-close" onClick={onClose} type="button">×</button>
+        <span className="section-kicker">Romans Shoe · Almaty</span>
+        <h2 id="auth-title">{success ? 'You’re all set' : mode === 'login' ? 'Welcome back' : 'Create an account'}</h2>
         {success ? (
           <div className="auth-success">
             <p>{success}</p>
-            <button className="checkout-button" onClick={onClose} type="button">Продолжить</button>
+            <button className="checkout-button" onClick={onClose} type="button">Continue</button>
           </div>
         ) : (
           <>
             {notice && <p className="auth-notice">{notice}</p>}
             {mode === 'login' && (
               <div className="demo-credentials">
-                Демо-доступ: <strong>demo@romans.shoe</strong> / <strong>romans123</strong>
+                Demo access: <strong>demo@romans.shoe</strong> / <strong>romans123</strong>
               </div>
             )}
             <form className="auth-form" onSubmit={handleSubmit}>
               {mode === 'register' && (
                 <label>
-                  Полное имя
+                  Full name
                   <input autoComplete="name" onChange={updateForm('name')} required value={form.name} />
                 </label>
               )}
               <label>
-                E-mail
+                Email
                 <input autoComplete="email" onChange={updateForm('email')} required type="email" value={form.email} />
               </label>
               <label>
-                Пароль
+                Password
                 <span className="password-field">
                   <input
                     autoComplete={mode === 'login' ? 'current-password' : 'new-password'}
@@ -407,14 +460,14 @@ function AuthDialog({ onClose, onLogin, onRegister, notice }) {
                     value={form.password}
                   />
                   <button onClick={() => setShowPassword((visible) => !visible)} type="button">
-                    {showPassword ? 'Скрыть' : 'Показать'}
+                    {showPassword ? 'Hide' : 'Show'}
                   </button>
                 </span>
               </label>
               {mode === 'register' && (
                 <>
                   <label>
-                    Повторите пароль
+                    Confirm password
                     <input
                       autoComplete="new-password"
                       onChange={updateForm('confirmation')}
@@ -425,17 +478,17 @@ function AuthDialog({ onClose, onLogin, onRegister, notice }) {
                   </label>
                   <label className="terms-check">
                     <input checked={acceptedTerms} onChange={(event) => setAcceptedTerms(event.target.checked)} type="checkbox" />
-                    <span>Принимаю условия демо-сайта</span>
+                    <span>I accept the demo site terms</span>
                   </label>
                 </>
               )}
               {error && <p className="form-error" role="alert">{error}</p>}
               <button className="checkout-button" type="submit">
-                {mode === 'login' ? 'Войти' : 'Зарегистрироваться'} <ArrowIcon />
+                {mode === 'login' ? 'Sign in' : 'Create account'} <ArrowIcon />
               </button>
             </form>
             <p className="auth-switch">
-              {mode === 'login' ? 'Нет аккаунта?' : 'Уже зарегистрированы?'}{' '}
+              {mode === 'login' ? 'New to Romans Shoe?' : 'Already have an account?'}{' '}
               <button
                 onClick={() => {
                   setMode(mode === 'login' ? 'register' : 'login')
@@ -443,10 +496,10 @@ function AuthDialog({ onClose, onLogin, onRegister, notice }) {
                 }}
                 type="button"
               >
-                {mode === 'login' ? 'Регистрация' : 'Войти'}
+                {mode === 'login' ? 'Create account' : 'Sign in'}
               </button>
             </p>
-            <p className="demo-disclaimer">Это демонстрационный интерфейс. Не используйте реальные пароли и платёжные данные.</p>
+            <p className="demo-disclaimer">Demo only. Do not use real passwords or payment details.</p>
           </>
         )}
       </section>
@@ -463,13 +516,19 @@ function App() {
   const [savedProducts, setSavedProducts] = useState(() => {
     try {
       const storedProducts = JSON.parse(localStorage.getItem('romans-products') || '[]')
-      return Array.isArray(storedProducts) ? storedProducts : []
+      return Array.isArray(storedProducts)
+        ? storedProducts.map((product) => ({
+            ...product,
+            brand: product.brand || 'Independent',
+            category: categories.find((item) => item.id === product.type)?.label || 'Shoes',
+          }))
+        : []
     } catch {
       return []
     }
   })
   const [productFormOpen, setProductFormOpen] = useState(false)
-  const [productForm, setProductForm] = useState({ name: '', category: 'sneakers', color: '', price: '', description: '' })
+  const [productForm, setProductForm] = useState({ brand: '', name: '', category: 'sneakers', color: '', price: '', description: '' })
   const [theme, setTheme] = useState(() => {
     try {
       return localStorage.getItem('romans-theme') === 'dark' ? 'dark' : 'light'
@@ -477,12 +536,12 @@ function App() {
       return 'light'
     }
   })
-  const [cart, setCart] = useState({})
+  const [cart, setCart] = useState(loadCart)
   const [cartOpen, setCartOpen] = useState(false)
   const [selectedProduct, setSelectedProduct] = useState(null)
   const [authOpen, setAuthOpen] = useState(false)
   const [authNotice, setAuthNotice] = useState('')
-  const [loggedUser, setLoggedUser] = useState(null)
+  const [loggedUser, setLoggedUser] = useState(loadSession)
   const [registeredAccount, setRegisteredAccount] = useState(null)
   const [checkoutMessage, setCheckoutMessage] = useState('')
 
@@ -493,6 +552,26 @@ function App() {
       localStorage.setItem('romans-products', JSON.stringify(savedProducts))
     } catch {}
   }, [savedProducts])
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('romans-cart', JSON.stringify(cart))
+    } catch (error) {
+      console.error('Could not save the shopping bag.', error)
+    }
+  }, [cart])
+
+  useEffect(() => {
+    try {
+      if (loggedUser) {
+        localStorage.setItem('romans-session', JSON.stringify(loggedUser))
+      } else {
+        localStorage.removeItem('romans-session')
+      }
+    } catch (error) {
+      console.error('Could not save the account session.', error)
+    }
+  }, [loggedUser])
 
   useEffect(() => {
     const timeoutId = setTimeout(() => setDebouncedSearch(search), 500)
@@ -520,21 +599,21 @@ function App() {
   }, [])
 
   const filteredProducts = useMemo(() => {
-    const query = debouncedSearch.trim().toLocaleLowerCase('ru-RU')
+    const query = debouncedSearch.trim().toLocaleLowerCase('en-US')
     const matches = allProducts.filter((product) => {
       const matchesCategory = category === 'all' || product.type === category
       const matchesSearch =
         !query ||
-        `${product.name} ${product.category} ${product.color}`
-          .toLocaleLowerCase('ru-RU')
+        `${product.brand || ''} ${product.name} ${product.category} ${product.color}`
+          .toLocaleLowerCase('en-US')
           .includes(query)
       return matchesCategory && matchesSearch
     })
     return matches.sort((first, second) => {
       if (sortBy === 'price-asc') return first.price - second.price
       if (sortBy === 'price-desc') return second.price - first.price
-      if (sortBy === 'name-asc') return first.name.localeCompare(second.name, 'ru')
-      if (sortBy === 'name-desc') return second.name.localeCompare(first.name, 'ru')
+      if (sortBy === 'name-asc') return first.name.localeCompare(second.name, 'en')
+      if (sortBy === 'name-desc') return second.name.localeCompare(first.name, 'en')
       return 0
     })
   }, [allProducts, category, debouncedSearch, sortBy])
@@ -581,11 +660,11 @@ function App() {
   const handleLogin = (email, password) => {
     if (email === demoAccount.email && password === demoAccount.password) {
       setLoggedUser({ name: demoAccount.name, email: demoAccount.email })
-      return `Вы вошли как ${demoAccount.name}.`
+      return `Signed in as ${demoAccount.name}.`
     }
     if (registeredAccount && email === registeredAccount.email && password === registeredAccount.password) {
       setLoggedUser({ name: registeredAccount.name, email: registeredAccount.email })
-      return `Вы вошли как ${registeredAccount.name}.`
+      return `Signed in as ${registeredAccount.name}.`
     }
     return ''
   }
@@ -594,17 +673,17 @@ function App() {
     if (account.email === demoAccount.email || account.email === registeredAccount?.email) return ''
     setRegisteredAccount(account)
     setLoggedUser({ name: account.name, email: account.email })
-    return `Аккаунт для ${account.name} создан. Вы вошли в демо-режиме.`
+    return `Account created for ${account.name}. You are signed in.`
   }
 
   const handleCheckout = () => {
     if (!loggedUser) {
       setCartOpen(false)
-      setAuthNotice('Войдите или зарегистрируйтесь, чтобы перейти к демо-оформлению заказа.')
+      setAuthNotice('Sign in or create an account to continue to demo checkout.')
       setAuthOpen(true)
       return
     }
-    setCheckoutMessage(`Демо-заказ подготовлен для ${loggedUser.name}. Оплата на сайте не производится.`)
+    setCheckoutMessage(`Demo order prepared for ${loggedUser.name}. No payment is collected.`)
   }
 
   const resetCatalog = () => {
@@ -618,40 +697,41 @@ function App() {
     const newProduct = {
       id: `custom-${Date.now()}`,
       name: productForm.name.trim(),
+      brand: productForm.brand.trim() || 'Independent',
       category: categories.find((item) => item.id === productForm.category).label,
       type: productForm.category,
       color: productForm.color.trim(),
       price: Number(productForm.price),
-      badge: 'Новая модель',
+      badge: 'New arrival',
       description: productForm.description.trim(),
-      image: products.find((product) => product.type === productForm.category).image,
+      image: products.find((product) => product.type === productForm.category)?.image || products[0].image,
     }
     setSavedProducts((current) => [...current, newProduct])
-    setProductForm({ name: '', category: 'sneakers', color: '', price: '', description: '' })
+    setProductForm({ brand: '', name: '', category: 'sneakers', color: '', price: '', description: '' })
     setProductFormOpen(false)
   }
 
   return (
     <div className="site-shell">
       <div className="announcement">
-        <span>Доставка бесплатно от 15 000 ₽</span>
+        <span>Complimentary delivery in Almaty on orders over ₸50,000</span>
         <span className="announcement-divider">·</span>
-        <span>Возврат в течение 14 дней</span>
+        <span>Easy 14-day returns</span>
       </div>
 
       <header className="site-header">
-        <a className="wordmark" href="#top" aria-label="Romans Shoe — на главную">
+        <a className="wordmark" href="#top" aria-label="Romans Shoe — home">
           ROMANS<span>SHOE</span>
           <span className="wordmark-period">.</span>
         </a>
-        <nav className="main-nav" aria-label="Основная навигация">
-          <a href="#catalog">Каталог</a>
-          <a href="#about">О бренде</a>
-          <a href="#footer">Контакты</a>
+        <nav className="main-nav" aria-label="Main navigation">
+          <a href="#catalog">Shop</a>
+          <a href="#about">About</a>
+          <a href="#footer">Visit us</a>
         </nav>
         <div className="header-actions">
           <button
-            aria-label={searchOpen ? 'Закрыть поиск' : 'Открыть поиск'}
+            aria-label={searchOpen ? 'Close search' : 'Open search'}
             className={`icon-button ${searchOpen ? 'is-active' : ''}`}
             onClick={() => setSearchOpen((open) => !open)}
             type="button"
@@ -662,12 +742,12 @@ function App() {
             </svg>
           </button>
           <button
-            aria-label={`Корзина, товаров: ${cartCount}`}
+            aria-label={`Shopping bag, items: ${cartCount}`}
             className="cart-button"
             onClick={() => setCartOpen(true)}
             type="button"
           >
-            <span>Корзина</span>
+            <span>Bag</span>
             <span className="cart-count">{String(cartCount).padStart(2, '0')}</span>
           </button>
           {loggedUser ? (
@@ -681,7 +761,7 @@ function App() {
                 }}
                 type="button"
               >
-                Выйти
+                Sign out
               </button>
             </div>
           ) : (
@@ -693,7 +773,7 @@ function App() {
               }}
               type="button"
             >
-              Войти
+              Sign in
             </button>
           )}
         </div>
@@ -708,17 +788,17 @@ function App() {
           }}
         >
           <label className="visually-hidden" htmlFor="site-search">
-            Найти обувь
+            Search shoes
           </label>
           <input
             autoFocus
             id="site-search"
             onChange={(event) => setSearch(event.target.value)}
-            placeholder="Найти свою пару..."
+            placeholder="Search brands and styles..."
             type="search"
             value={search}
           />
-          <button aria-label="Искать" type="submit">
+          <button aria-label="Search" type="submit">
             <ArrowIcon />
           </button>
         </form>
@@ -727,45 +807,45 @@ function App() {
       <main id="top">
         <section className="hero">
           <div className="hero-copy">
-            <p className="eyebrow"><span className="eyebrow-dot" /> Новая коллекция · 2026</p>
+            <p className="eyebrow"><span className="eyebrow-dot" /> Independent sneaker boutique · Almaty</p>
             <h1>
-              Свой путь.
+              The sneaker
               <br />
-              <span>Свой шаг.</span>
+              <span>edit.</span>
             </h1>
             <p className="hero-description">
-              Обувь, в которой удобно быть собой. Продуманный дизайн на каждый
-              день и далеко за его пределами.
+              A considered selection of Nike, adidas, Reebok and ASICS — curated
+              for everyday life in Almaty.
             </p>
             <a className="primary-link" href="#catalog">
-              Смотреть коллекцию <ArrowIcon />
+              Shop the collection <ArrowIcon />
             </a>
             <div className="hero-note">
               <span className="hero-note-line" />
-              <span>Создано для движения</span>
+              <span>Selected in Almaty</span>
             </div>
           </div>
           <div className="hero-visual">
             <img
-              alt="Красные кроссовки Romans Shoe — акцентная пара новой коллекции"
+              alt="Red Nike Air Max sneaker"
               className="hero-image"
               src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1500&q=90"
             />
             <div className="hero-image-caption">
               <span>01 / 03</span>
-              <span>Коллекция движения</span>
+              <span>New season selection</span>
             </div>
             <div className="hero-stamp" aria-hidden="true">
               R<span>S</span>
             </div>
           </div>
-          <div className="hero-index" aria-hidden="true">01 — 03</div>
+          <div className="hero-index" aria-hidden="true">ALMATY — KZ</div>
         </section>
 
-        <section className="category-strip" aria-label="Категории обуви">
+        <section className="category-strip" aria-label="Shop by category">
           <div>
-            <span className="section-kicker">Найди свою пару</span>
-            <h2>Обувь на твой ритм</h2>
+            <span className="section-kicker">Shop by category</span>
+            <h2>Find your pair</h2>
           </div>
           <div className="category-links">
             {categories.slice(1).map((item, index) => (
@@ -789,28 +869,36 @@ function App() {
         <section className="catalog-section" id="catalog">
           <div className="catalog-heading">
             <div>
-              <span className="section-kicker">Твоя следующая пара</span>
-              <h2>Выбор Romans</h2>
+              <span className="section-kicker">The Almaty edit</span>
+              <h2>Shop the collection</h2>
             </div>
-            <p>Комфортная база, которая работает каждый день.</p>
+            <p>Iconic sneakers and everyday essentials from the brands you love.</p>
           </div>
           <div className="catalog-utilities">
             <button className="text-button add-product-trigger" onClick={() => setProductFormOpen((open) => !open)} type="button">
-              {productFormOpen ? 'Закрыть форму' : 'Добавить модель'}
+              {productFormOpen ? 'Close form' : 'Add a product'}
             </button>
             <button
-              aria-label={`Переключить тему на ${theme === 'light' ? 'тёмную' : 'светлую'}`}
+              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
               className="theme-toggle"
               onClick={() => setTheme((current) => current === 'light' ? 'dark' : 'light')}
               type="button"
             >
-              {theme === 'light' ? 'Тёмная тема' : 'Светлая тема'}
+              {theme === 'light' ? 'Dark theme' : 'Light theme'}
             </button>
           </div>
           {productFormOpen && (
             <form className="product-entry-form" onSubmit={handleAddProduct}>
               <label>
-                Название модели
+                Brand
+                <input
+                  onChange={(event) => setProductForm((current) => ({ ...current, brand: event.target.value }))}
+                  required
+                  value={productForm.brand}
+                />
+              </label>
+              <label>
+                Product name
                 <input
                   onChange={(event) => setProductForm((current) => ({ ...current, name: event.target.value }))}
                   required
@@ -818,7 +906,7 @@ function App() {
                 />
               </label>
               <label>
-                Категория
+                Category
                 <select
                   onChange={(event) => setProductForm((current) => ({ ...current, category: event.target.value }))}
                   value={productForm.category}
@@ -827,7 +915,7 @@ function App() {
                 </select>
               </label>
               <label>
-                Цвет
+                Color
                 <input
                   onChange={(event) => setProductForm((current) => ({ ...current, color: event.target.value }))}
                   required
@@ -835,7 +923,7 @@ function App() {
                 />
               </label>
               <label>
-                Цена, ₽
+                Price, ₸
                 <input
                   min="1"
                   onChange={(event) => setProductForm((current) => ({ ...current, price: event.target.value }))}
@@ -845,18 +933,18 @@ function App() {
                 />
               </label>
               <label className="product-entry-description">
-                Краткое описание
+                Short description
                 <input
                   onChange={(event) => setProductForm((current) => ({ ...current, description: event.target.value }))}
-                  placeholder="Материал, назначение или особенность"
+                  placeholder="Materials, purpose or feature"
                   value={productForm.description}
                 />
               </label>
-              <button className="product-buy-button" type="submit">Сохранить модель</button>
+              <button className="product-buy-button" type="submit">Save product</button>
             </form>
           )}
           <div className="catalog-controls">
-            <div className="filter-list" aria-label="Фильтр по категориям">
+            <div className="filter-list" aria-label="Filter by category">
               {categories.map((item) => (
                 <button
                   aria-pressed={category === item.id}
@@ -872,20 +960,20 @@ function App() {
             </div>
             <div className="catalog-tools">
               <label className="sort-control">
-                <span>Сортировка</span>
+                <span>Sort</span>
                 <select onChange={(event) => setSortBy(event.target.value)} value={sortBy}>
-                  <option value="featured">По умолчанию</option>
-                  <option value="price-asc">Сначала дешевле</option>
-                  <option value="price-desc">Сначала дороже</option>
-                  <option value="name-asc">Название: А–Я</option>
-                  <option value="name-desc">Название: Я–А</option>
+                  <option value="featured">Featured</option>
+                  <option value="price-asc">Price: low to high</option>
+                  <option value="price-desc">Price: high to low</option>
+                  <option value="name-asc">Name: A to Z</option>
+                  <option value="name-desc">Name: Z to A</option>
                 </select>
               </label>
-              <span className="product-count">Найдено: {filteredProducts.length}</span>
+              <span className="product-count">{filteredProducts.length} items</span>
             </div>
           </div>
           {(category !== 'all' || search || sortBy !== 'featured') && (
-            <button className="reset-filters" onClick={resetCatalog} type="button">Сбросить фильтры</button>
+            <button className="reset-filters" onClick={resetCatalog} type="button">Clear filters</button>
           )}
 
           {filteredProducts.length > 0 ? (
@@ -905,8 +993,8 @@ function App() {
             </div>
           ) : (
             <div className="empty-state">
-              <span>Пока ничего не нашли</span>
-              <p>Попробуй изменить запрос или выбрать другую категорию.</p>
+              <span>No products found</span>
+              <p>Try another search or choose a different category.</p>
               <button
                 className="text-button"
                 onClick={() => {
@@ -914,7 +1002,7 @@ function App() {
                 }}
                 type="button"
               >
-                Показать всю обувь <ArrowIcon />
+                Show all footwear <ArrowIcon />
               </button>
             </div>
           )}
@@ -923,41 +1011,41 @@ function App() {
         <section className="manifesto" id="about">
           <div className="manifesto-image">
             <img
-              alt="Деталь кроссовка из коллекции Romans Shoe"
+              alt="Detail of a sneaker from the Romans Shoe selection"
               loading="lazy"
               src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=1200&q=85"
             />
-            <span className="manifesto-image-label">Материал имеет значение</span>
+            <span className="manifesto-image-label">Considered from every angle</span>
           </div>
           <div className="manifesto-copy">
-            <span className="section-kicker">Философия Romans</span>
-            <h2>Меньше шума.<br /><em>Больше движения.</em></h2>
+            <span className="section-kicker">Independent sneaker boutique</span>
+            <h2>Global icons.<br /><em>Almaty point of view.</em></h2>
             <p>
-              Мы верим в вещи, которые не нужно менять каждый сезон. Честные
-              материалы, удобная посадка и форма, которая остаётся актуальной.
+              A handpicked mix of sport heritage and modern essentials, brought
+              together for the city.
             </p>
             <a className="text-button" href="#catalog">
-              Познакомиться с коллекцией <ArrowIcon />
+              Explore the collection <ArrowIcon />
             </a>
             <span className="manifesto-mark" aria-hidden="true">R.</span>
           </div>
         </section>
 
-        <section className="service-row" aria-label="Преимущества магазина">
+        <section className="service-row" aria-label="Store services">
           <div>
             <span className="service-number">01</span>
-            <h3>Продуманная посадка</h3>
-            <p>Комфорт, который чувствуешь с первого шага.</p>
+            <h3>Curated brands</h3>
+            <p>Nike, adidas, Reebok and ASICS in one place.</p>
           </div>
           <div>
             <span className="service-number">02</span>
-            <h3>Доставка по России</h3>
-            <p>Бережно упакуем и отправим твою пару.</p>
+            <h3>Almaty delivery</h3>
+            <p>Complimentary delivery on orders over ₸50,000.</p>
           </div>
           <div>
             <span className="service-number">03</span>
-            <h3>Лёгкий возврат</h3>
-            <p>14 дней, чтобы принять решение.</p>
+            <h3>Easy returns</h3>
+            <p>Take 14 days to decide.</p>
           </div>
         </section>
       </main>
@@ -967,15 +1055,15 @@ function App() {
           <a className="wordmark footer-wordmark" href="#top">
             ROMANS<span>SHOE</span><span className="wordmark-period">.</span>
           </a>
-          <p>Свой путь. Свой шаг.</p>
+          <p>Independent sneaker boutique · Almaty, Kazakhstan</p>
           <a className="footer-email" href="mailto:hello@romans.shoe">
             hello@romans.shoe <ArrowIcon diagonal />
           </a>
         </div>
         <div className="footer-bottom">
-          <span>© 2025 Romans Shoe</span>
-          <span>Обувь для твоего движения</span>
-          <a href="#top">Наверх ↑</a>
+          <span>© 2026 Romans Shoe</span>
+          <span>Demo storefront · Product availability and prices are illustrative</span>
+          <a href="#top">Back to top ↑</a>
         </div>
       </footer>
 
