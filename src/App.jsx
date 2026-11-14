@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { CheckoutSection } from './CheckoutForm'
 import './App.css'
 
 const products = [
@@ -8,11 +9,17 @@ const products = [
     name: 'Air Max 90',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'Infrared / white',
+    color: 'Iron grey / dark smoke grey / black / white',
     price: 68900,
     badge: 'Bestseller',
     image:
-      'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/w2ldynwtyuspv6r5rffj/AIR+MAX+90.png',
+    gallery: [
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/w2ldynwtyuspv6r5rffj/AIR+MAX+90.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/njrzuhkcnrtmxrh7qrqr/AIR+MAX+90.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/ma6tfbsbasqhmsjo9zyx/AIR+MAX+90.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/kueezdeizhfbannsmfax/AIR+MAX+90.png',
+    ],
   },
   {
     id: 2,
@@ -20,11 +27,17 @@ const products = [
     name: 'Samba OG',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'Cloud white / core black',
+    color: 'Cloud white / core black / clear granite',
     price: 54900,
     badge: 'New',
     image:
-      'https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=900&q=85',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Samba_OG_Shoes_White_B75806_01_00_standard.jpg',
+    gallery: [
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/3bbecbdf584e40398446a8bf0117cf62_9366/Samba_OG_Shoes_White_B75806_01_00_standard.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ec595635a2994adea094a8bf0117ef1a_9366/Samba_OG_Shoes_White_B75806_02_standard_hover.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/97cd0902ae2e402b895aa8bf0117f98f_9366/Samba_OG_Shoes_White_B75806_03_standard.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b067d21288bc43ec8298a8bf01180400_9366/Samba_OG_Shoes_White_B75806_04_standard.jpg',
+    ],
   },
   {
     id: 3,
@@ -32,11 +45,18 @@ const products = [
     name: 'Club C 85',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'Chalk / green',
+    color: 'Footwear white / sheer grey',
     price: 49900,
     badge: '',
     image:
-      'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=900&q=90',
+      'https://www.reebok.com/cdn/shop/files/100000154_SLC_eCom_e8e16aea-6c4e-45a6-b3c7-2a2973581caa.jpg?v=1774529995&width=1000',
+    gallery: [
+      'https://www.reebok.com/cdn/shop/files/100000154_SLC_eCom_e8e16aea-6c4e-45a6-b3c7-2a2973581caa.jpg?v=1774529995&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100000154_TPP_eCom_907c3975-f40c-46d8-90e2-42d77d54f0a7.jpg?v=1774529995&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100000154_BLT_eCom_c4b44ff8-5843-4dc3-a500-7ca20aa54ffa.jpg?v=1774529995&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100000154_FLT_eCom_35afd3fe-e4da-4903-9ba1-dbddc9f487c4.jpg?v=1774529995&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100000154_D2_eCom.jpg?v=1774529995&width=1000',
+    ],
   },
   {
     id: 4,
@@ -48,7 +68,11 @@ const products = [
     price: 79900,
     badge: 'New',
     image:
-      'https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=900&q=85',
+      'https://images.stockx.com/images/Nike-Manoa-Leather-Black-Product.jpg?fit=fill&bg=FFFFFF&w=1000&h=714&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358',
+    gallery: [
+      'https://images.stockx.com/images/Nike-Manoa-Leather-Black-Product.jpg?fit=fill&bg=FFFFFF&w=1000&h=714&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1738193358',
+      'https://ks2.imper.info/jedi-img/public/nike/buty/454350-003/2560x2560/nike-buty-manoa-leather-454350-003-c5ef28f0.jpg',
+    ],
   },
   {
     id: 5,
@@ -60,19 +84,32 @@ const products = [
     price: 57900,
     badge: '',
     image:
-      'https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=900&q=90',
+      'https://www.consortium.co.uk/media/catalog/product/cache/1/image/1000x/af097278c5db4767b0fe9bb92fe21690/a/d/adidas-originals-gazelle-preloved-red-off-white-cream-white-gy7339_0000_cat.jpg',
+    gallery: [
+      'https://www.consortium.co.uk/media/catalog/product/cache/1/image/1000x/af097278c5db4767b0fe9bb92fe21690/a/d/adidas-originals-gazelle-preloved-red-off-white-cream-white-gy7339_0000_cat.jpg',
+      'https://www.consortium.co.uk/media/catalog/product/cache/1/small_image/790x/040ec09b1e35df139433887a97daa66f/a/d/adidas-originals-gazelle-preloved-red-off-white-cream-white-gy7339_0001_1.jpg',
+      'https://www.consortium.co.uk/media/catalog/product/cache/1/small_image/790x/040ec09b1e35df139433887a97daa66f/a/d/adidas-originals-gazelle-preloved-red-off-white-cream-white-gy7339_0002_2.jpg',
+      'https://www.consortium.co.uk/media/catalog/product/cache/1/small_image/790x/040ec09b1e35df139433887a97daa66f/a/d/adidas-originals-gazelle-preloved-red-off-white-cream-white-gy7339_0003_3.jpg',
+      'https://www.consortium.co.uk/media/catalog/product/cache/1/small_image/790x/040ec09b1e35df139433887a97daa66f/a/d/adidas-originals-gazelle-preloved-red-off-white-cream-white-gy7339_0004_4.jpg',
+    ],
   },
   {
     id: 6,
     brand: 'Nike',
-    name: 'Dunk Low',
+    name: 'Dunk Low Retro SE',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'White / university blue',
+    color: 'Black / black / black',
     price: 62900,
     badge: '',
     image:
-      'https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=900&q=85',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7d9eae32-e65b-477c-bf8b-e2ffad5d0a37/NIKE+DUNK+LOW+RETRO+SE.png',
+    gallery: [
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/7d9eae32-e65b-477c-bf8b-e2ffad5d0a37/NIKE+DUNK+LOW+RETRO+SE.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/778562fa-c536-4456-acd8-48467adb8b61/NIKE+DUNK+LOW+RETRO+SE.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e75f552f-b4d0-4991-9a5a-4f0930aaf8ba/NIKE+DUNK+LOW+RETRO+SE.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/46ae7f6c-fd9f-4573-88c4-d18aa0f1f8b6/NIKE+DUNK+LOW+RETRO+SE.png',
+    ],
   },
   {
     id: 7,
@@ -80,12 +117,19 @@ const products = [
     name: 'GT-2160',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'White / pure silver',
+    color: 'White / graphite grey',
     price: 69900,
     badge: 'New',
     description: 'A lightweight running-inspired sneaker with cushioned comfort for everyday wear.',
     image:
-      'https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=900&q=90',
+      'https://images.asics.com/is/image/asics/1203A275_115_SL_LT_GLB?$sfcc-product$&fmt=jpg&wid=1000',
+    gallery: [
+      'https://images.asics.com/is/image/asics/1203A275_115_SL_LT_GLB?$sfcc-product$&fmt=jpg&wid=1000',
+      'https://images.asics.com/is/image/asics/1203A275_115_SB_FR_GLB?$sfcc-product$&fmt=jpg&wid=1000',
+      'https://images.asics.com/is/image/asics/1203A275_115_SB_FL_GLB?$sfcc-product$&fmt=jpg&wid=1000',
+      'https://images.asics.com/is/image/asics/1203A275_115_SR_LT_GLB?$sfcc-product$&fmt=jpg&wid=1000',
+      'https://images.asics.com/is/image/asics/1203A275_115_SB_BK_GLB?$sfcc-product$&fmt=jpg&wid=1000',
+    ],
   },
   {
     id: 8,
@@ -93,25 +137,37 @@ const products = [
     name: 'Classic Leather',
     category: 'Shoes',
     type: 'shoes',
-    color: 'Chalk / black',
+    color: 'Footwear white / pure grey / rubber gum',
     price: 45900,
     badge: '',
     description: 'A clean leather classic with a soft step and timeless low-profile shape.',
     image:
-      'https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=900&q=90',
+      'https://www.reebok.eu/cdn/shop/files/JPG-100008491_SLC_eCom.jpg?v=1758538069&width=1000',
+    gallery: [
+      'https://www.reebok.eu/cdn/shop/files/JPG-100008491_SLC_eCom.jpg?v=1758538069&width=1000',
+      'https://www.reebok.eu/cdn/shop/files/JPG-100008491_FLT_eCom.jpg?v=1758538069&width=1000',
+      'https://www.reebok.eu/cdn/shop/files/JPG-100008491_TPP_eCom.jpg?v=1773854650&width=1000',
+      'https://www.reebok.eu/cdn/shop/files/JPG-100008491_BLT_eCom.jpg?v=1773854650&width=1000',
+      'https://www.reebok.eu/cdn/shop/files/JPG-100008491_D2_eCom.jpg?v=1773854650&width=1000',
+    ],
   },
   {
     id: 9,
     brand: 'adidas',
-    name: 'Superstar',
+    name: 'Superstar II',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'White / black',
+    color: 'Cloud white / core black / cloud white',
     price: 52900,
     badge: '',
     description: 'The iconic shell-toe sneaker, made for everyday city style.',
     image:
-      'https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?auto=format&fit=crop&w=900&q=90',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5643ea9848e94c1da869fd176bd19128_9366/Superstar_II_Shoes_White_IH8659_01_standard.jpg',
+    gallery: [
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5643ea9848e94c1da869fd176bd19128_9366/Superstar_II_Shoes_White_IH8659_01_standard.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6a57f20797824055b52e39de67322cda_9366/Superstar_II_Shoes_White_IH8659_02_standard_hover.jpg',
+      'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c54e56d691cf4f3b982490a2ff603dc4_9366/Superstar_II_Shoes_White_IH8659_03_standard.jpg',
+    ],
   },
   {
     id: 10,
@@ -124,7 +180,13 @@ const products = [
     badge: 'Bestseller',
     description: 'A court classic with a smooth leather upper and all-day cushioning.',
     image:
-      'https://images.unsplash.com/photo-1460353581641-37baddab0fa2?auto=format&fit=crop&w=900&q=90',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/AIR+FORCE+1+%2707.png',
+    gallery: [
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e6da41fa-1be4-4ce5-b89c-22be4f1f02d4/AIR+FORCE+1+%2707.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d0ad440c-2d9b-4a58-93a4-9e2ea050fea3/AIR+FORCE+1+%2707.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/d62499db-6a46-43a7-8135-cefaa88124ed/AIR+FORCE+1+%2707.png',
+      'https://static.nike.com/a/images/t_PDP_144_v1/f_auto,q_auto:eco,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6036bbbb-1cf1-410c-9546-8fb737c95797/AIR+FORCE+1+%2707.png',
+    ],
   },
   {
     id: 11,
@@ -132,12 +194,18 @@ const products = [
     name: 'Classic Nylon',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'Chalk / vector navy',
+    color: 'Vector navy / footwear white',
     price: 47900,
     badge: '',
     description: 'A retro runner in soft suede and nylon with a comfortable padded fit.',
     image:
-      'https://images.unsplash.com/photo-1514989940723-e8e51635b782?auto=format&fit=crop&w=900&q=90',
+      'https://www.reebok.com/cdn/shop/files/100009276_SLC_eCom.jpg?v=1764594799&width=1000',
+    gallery: [
+      'https://www.reebok.com/cdn/shop/files/100009276_SLC_eCom.jpg?v=1764594799&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100009276_FLT_eCom.jpg?v=1764594799&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100009276_TPP_eCom.jpg?v=1764594799&width=1000',
+      'https://www.reebok.com/cdn/shop/files/100009276_D2_eCom.jpg?v=1764594799&width=1000',
+    ],
   },
   {
     id: 12,
@@ -145,12 +213,18 @@ const products = [
     name: 'GEL-1130',
     category: 'Sneakers',
     type: 'sneakers',
-    color: 'Cream / graphite grey',
+    color: 'Cream white',
     price: 64900,
     badge: '',
     description: 'A heritage running silhouette with GEL cushioning for a smooth city stride.',
     image:
-      'https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=90',
+      'https://images.stockx.com/360/ASICS-Gel-1130-Cream-White/Images/ASICS-Gel-1130-Cream-White/Lv2/img01.jpg?w=1000&q=85',
+    gallery: [
+      'https://images.stockx.com/360/ASICS-Gel-1130-Cream-White/Images/ASICS-Gel-1130-Cream-White/Lv2/img01.jpg?w=1000&q=85',
+      'https://images.stockx.com/360/ASICS-Gel-1130-Cream-White/Images/ASICS-Gel-1130-Cream-White/Lv2/img06.jpg?w=1000&q=85',
+      'https://images.stockx.com/360/ASICS-Gel-1130-Cream-White/Images/ASICS-Gel-1130-Cream-White/Lv2/img12.jpg?w=1000&q=85',
+      'https://images.stockx.com/360/ASICS-Gel-1130-Cream-White/Images/ASICS-Gel-1130-Cream-White/Lv2/img18.jpg?w=1000&q=85',
+    ],
   },
 ]
 
@@ -261,6 +335,12 @@ function ProductCard({ product, index, totalCount, quantity, onAdd, onBuy, onVie
 }
 
 function ProductDetailDialog({ product, onClose, onAdd }) {
+  const gallery = product.gallery?.length ? product.gallery : [product.image]
+  const [activeImage, setActiveImage] = useState(0)
+  const showImage = (offset) => {
+    setActiveImage((current) => (current + offset + gallery.length) % gallery.length)
+  }
+
   return (
     <div className="modal-overlay" onMouseDown={onClose}>
       <section
@@ -271,7 +351,48 @@ function ProductDetailDialog({ product, onClose, onAdd }) {
         role="dialog"
       >
         <button aria-label="Close product details" className="close-button modal-close" onClick={onClose} type="button">×</button>
-        <img alt={`${product.brand} ${product.name}`} src={product.image} />
+        <div className="product-gallery">
+          <img
+            alt={`${product.brand} ${product.name}, view ${activeImage + 1}`}
+            className="product-gallery-main"
+            src={gallery[activeImage]}
+          />
+          {gallery.length > 1 && (
+            <>
+              <button
+                aria-label="Previous product image"
+                className="gallery-arrow gallery-arrow--previous"
+                onClick={() => showImage(-1)}
+                type="button"
+              >
+                ‹
+              </button>
+              <button
+                aria-label="Next product image"
+                className="gallery-arrow gallery-arrow--next"
+                onClick={() => showImage(1)}
+                type="button"
+              >
+                ›
+              </button>
+              <span className="gallery-counter">{activeImage + 1} / {gallery.length}</span>
+              <div aria-label="Product image views" className="gallery-thumbnails">
+                {gallery.map((image, index) => (
+                  <button
+                    aria-label={`Show product image ${index + 1}`}
+                    aria-pressed={activeImage === index}
+                    className={activeImage === index ? 'is-active' : ''}
+                    key={image}
+                    onClick={() => setActiveImage(index)}
+                    type="button"
+                  >
+                    <img alt="" loading="lazy" src={image} />
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
         <div className="product-detail-copy">
           <span className="section-kicker">{product.brand || 'Independent'} · {product.category} · RS-{String(product.id).padStart(3, '0')}</span>
           <h2 id="product-detail-title">{product.name}</h2>
@@ -296,8 +417,6 @@ function CartDrawer({
   cartItems,
   cartCount,
   cartTotal,
-  checkoutMessage,
-  loggedUser,
   onBrowse,
   onCheckout,
   onClose,
@@ -350,9 +469,9 @@ function CartDrawer({
             <div className="cart-summary">
               <div><span>Total</span><strong>{formatPrice(cartTotal)}</strong></div>
               <button className="checkout-button" onClick={onCheckout} type="button">
-                {loggedUser ? 'Place demo order' : 'Sign in to checkout'} <ArrowIcon />
+                Proceed to checkout <ArrowIcon />
               </button>
-              {checkoutMessage ? <p className="checkout-message" role="status">{checkoutMessage}</p> : <p>Demo checkout · no payment is collected.</p>}
+              <p>Place your order with delivery to your door.</p>
             </div>
           </>
         ) : (
@@ -543,7 +662,6 @@ function App() {
   const [authNotice, setAuthNotice] = useState('')
   const [loggedUser, setLoggedUser] = useState(loadSession)
   const [registeredAccount, setRegisteredAccount] = useState(null)
-  const [checkoutMessage, setCheckoutMessage] = useState('')
 
   const allProducts = useMemo(() => [...products, ...savedProducts], [savedProducts])
 
@@ -633,8 +751,8 @@ function App() {
   }
 
   const buyNow = (productId) => {
-    setCart((current) => ({ ...current, [productId]: current[productId] || 1 }))
-    setCartOpen(true)
+    setCart((current) => ({ ...current, [productId]: (current[productId] || 0) + 1 }))
+    document.querySelector('#checkout')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   const changeQuantity = (productId, change) => {
@@ -677,13 +795,8 @@ function App() {
   }
 
   const handleCheckout = () => {
-    if (!loggedUser) {
-      setCartOpen(false)
-      setAuthNotice('Sign in or create an account to continue to demo checkout.')
-      setAuthOpen(true)
-      return
-    }
-    setCheckoutMessage(`Demo order prepared for ${loggedUser.name}. No payment is collected.`)
+    setCartOpen(false)
+    document.querySelector('#checkout')?.scrollIntoView({ behavior: 'smooth' })
   }
 
   const resetCatalog = () => {
@@ -726,6 +839,7 @@ function App() {
         </a>
         <nav className="main-nav" aria-label="Main navigation">
           <a href="#catalog">Shop</a>
+          <a href="#checkout">Checkout</a>
           <a href="#about">About</a>
           <a href="#footer">Visit us</a>
         </nav>
@@ -757,7 +871,6 @@ function App() {
                 className="account-button"
                 onClick={() => {
                   setLoggedUser(null)
-                  setCheckoutMessage('')
                 }}
                 type="button"
               >
@@ -1008,6 +1121,17 @@ function App() {
           )}
         </section>
 
+        <CheckoutSection
+          cart={cart}
+          cartItems={cartItems}
+          cartTotal={cartTotal}
+          formatPrice={formatPrice}
+          onBrowseCatalog={() => {
+            document.querySelector('#catalog')?.scrollIntoView({ behavior: 'smooth' })
+          }}
+          onClearCart={() => setCart({})}
+        />
+
         <section className="manifesto" id="about">
           <div className="manifesto-image">
             <img
@@ -1073,8 +1197,6 @@ function App() {
           cartCount={cartCount}
           cartItems={cartItems}
           cartTotal={cartTotal}
-          checkoutMessage={checkoutMessage}
-          loggedUser={loggedUser}
           onBrowse={() => {
             setCartOpen(false)
             document.querySelector('#catalog')?.scrollIntoView({ behavior: 'smooth' })
@@ -1088,6 +1210,7 @@ function App() {
 
       {selectedProduct && (
         <ProductDetailDialog
+          key={selectedProduct.id}
           onAdd={() => {
             addToCart(selectedProduct.id)
             setSelectedProduct(null)
