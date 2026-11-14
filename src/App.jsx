@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 import { CheckoutSection } from './CheckoutForm'
+import { FlashSaleSection } from './FlashSaleSection'
 import './App.css'
 
 const products = [
@@ -251,7 +252,8 @@ function loadCart() {
       Object.entries(parsedCart).filter(
         ([productId, quantity]) =>
           (products.some((product) => String(product.id) === productId) ||
-            /^custom-\d+$/.test(productId)) &&
+            /^custom-\d+$/.test(productId) ||
+            String(productId).startsWith('sale-')) &&
           Number.isInteger(quantity) &&
           quantity > 0,
       ),
@@ -662,8 +664,12 @@ function App() {
   const [authNotice, setAuthNotice] = useState('')
   const [loggedUser, setLoggedUser] = useState(loadSession)
   const [registeredAccount, setRegisteredAccount] = useState(null)
+  const [saleItemsMap, setSaleItemsMap] = useState({})
 
-  const allProducts = useMemo(() => [...products, ...savedProducts], [savedProducts])
+  const allProducts = useMemo(
+    () => [...products, ...savedProducts, ...Object.values(saleItemsMap)],
+    [savedProducts, saleItemsMap],
+  )
 
   useEffect(() => {
     try {
@@ -755,6 +761,24 @@ function App() {
     document.querySelector('#checkout')?.scrollIntoView({ behavior: 'smooth' })
   }
 
+  const handleSaleAddToCart = (saleProduct) => {
+    setSaleItemsMap((prev) => ({ ...prev, [saleProduct.id]: saleProduct }))
+    setCart((current) => ({
+      ...current,
+      [saleProduct.id]: (current[saleProduct.id] || 0) + 1,
+    }))
+    setCartOpen(true)
+  }
+
+  const handleSaleBuyNow = (saleProduct) => {
+    setSaleItemsMap((prev) => ({ ...prev, [saleProduct.id]: saleProduct }))
+    setCart((current) => ({
+      ...current,
+      [saleProduct.id]: (current[saleProduct.id] || 0) + 1,
+    }))
+    document.querySelector('#checkout')?.scrollIntoView({ behavior: 'smooth' })
+  }
+
   const changeQuantity = (productId, change) => {
     setCart((current) => {
       const nextCount = (current[productId] || 0) + change
@@ -839,6 +863,7 @@ function App() {
         </a>
         <nav className="main-nav" aria-label="Main navigation">
           <a href="#catalog">Shop</a>
+          <a href="#flash-sale">Flash Sale</a>
           <a href="#checkout">Checkout</a>
           <a href="#about">About</a>
           <a href="#footer">Visit us</a>
@@ -978,6 +1003,12 @@ function App() {
             ))}
           </div>
         </section>
+
+        <FlashSaleSection
+          formatPrice={formatPrice}
+          onAddToCart={handleSaleAddToCart}
+          onBuyNow={handleSaleBuyNow}
+        />
 
         <section className="catalog-section" id="catalog">
           <div className="catalog-heading">
